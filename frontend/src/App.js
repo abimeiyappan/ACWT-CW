@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const App = () => {
+function App () {
   return (
     <>
       <h2>Welcome to ProShop!</h2>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
