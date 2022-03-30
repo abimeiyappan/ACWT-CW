@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import {Container} from 'react-bootstrap'
+import HomePage from './Pages/HomePage'
 
 function App () {
   return (
@@ -9,7 +10,7 @@ function App () {
     <Header />
     <Container>
     <main className='py-4'>
-      <h1>Welcome to FurnShop!</h1>
+      <HomePage />
     </main>
     </Container>
     
