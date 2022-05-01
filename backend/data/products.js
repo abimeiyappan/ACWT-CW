@@ -1,6 +1,5 @@
 const products = [
     {
-        _id: '501',
         name: 'Bedside Table',
         image: '/Images/BedsideTable.webp',
         description: '100% oak, premium finish, readily assembled.',
@@ -12,7 +11,6 @@ const products = [
         numReviews: 8,
     },
     {
-        _id: '502',
         name: 'Book Shelf',
         image: '/Images/BookCase.webp',
         description: '100% oak, premium finish, readily assembled.',
@@ -24,20 +22,17 @@ const products = [
         numReviews: 7,
     },
     {
-        _id: '503',
         name: 'King Size Bed',
         image: '/Images/KingSizeBed.webp',
         description: '100% oak, premium finish, readily assembled.',
         brand: 'Ikea',
         category: 'Furniture',
-
         price: 1200,
         countInStock: 10,
         rating: 4.8,
         numReviews: 12,
     },
     {
-        _id: '504',
         name: 'Dining Table',
         image: '/Images/DiningTable.webp',
         description: 'Table comes with 4 chairs. 100% oak, premium finish, readily assembled.',
@@ -49,7 +44,6 @@ const products = [
         numReviews: 5,
     },
     {
-        _id: '505',
         name: 'Accent Chair',
         image: '/Images/Chair.webp',
         description: 'Leather fabric, 100% wood, premium finish, readily assembled.',
@@ -61,7 +55,6 @@ const products = [
         numReviews: 32,
     },
     {
-        _id: '506',
         name: 'Wall Art',
         image: '/Images/WallArt.webp',
         description: 'Elegant 2-panel wall art. Each panel measures 120*70 cm.',
@@ -73,7 +66,6 @@ const products = [
         numReviews: 5,
     },
     {
-        _id: '507',
         name: 'Wall Clock',
         image: '/Images/WallClock.webp',
         description: 'Elegant wall clock measuring 60*60 cm.',
@@ -85,7 +77,6 @@ const products = [
         numReviews: 10,
     },
     {
-        _id: '508',
         name: 'Table Lamp',
         image: '/Images/tablelamp.webp',
         description: 'Elegant lamp that could go on your bed side table or study table. 90*30 cm.',
@@ -97,7 +88,6 @@ const products = [
         numReviews: 2,
     },
     {
-        _id: '509',
         name: 'Wall Mirror',
         image: '/Images/WallMirror.webp',
         description: 'Mirror with a modern design. 90*50 cm.',
@@ -109,7 +99,6 @@ const products = [
         numReviews: 16,
     },
     {
-        _id: '510',
         name: 'Rug',
         image: '/Images/Rug.webp',
         description: 'Charcoal gray rug. 180*80 cm.',
