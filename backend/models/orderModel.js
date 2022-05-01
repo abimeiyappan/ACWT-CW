@@ -1,17 +1,12 @@
 import mongoose from 'mongoose'
 
-const oSchema = ({
+const oSchema = mongoose.Schema({
     name:{
         required: true,
         type: mongoose.Schema.Types.ObjectId,
         ref:'User',
     },
     orderItems:[{
-        product: {
-            required: true,
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Prod'
-        },
         name:{
             type: String,
             required: true,
@@ -28,31 +23,35 @@ const oSchema = ({
             type: Number,
             required: true,
         },
-        shippingAddress:[{
-            address: {
-                type: String,
-                required: true,
-            },
-            city:{
-                type: String,
-                required: true,
-            },
-            postalCode: {
-                type: String,
-                required: true,
-            },
-            country: {
-                type: String,
-                required: true,
-            },
-        }],
-    }
-    ],
+        product: {
+            required: true,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Prod'
+        }
+    }],
+    shippingAddress:{
+        address: {
+            type: String,
+            required: true,
+        },
+        city:{
+            type: String,
+            required: true,
+        },
+        postalCode: {
+            type: String,
+            required: true,
+        },
+        country: {
+            type: String,
+            required: true,
+        }
+    },
     paymentType:{
         required: true,
         type: String,
     },
-    paymentResult:[{
+    paymentResult:{
         id: {
             type: String,
         },
@@ -65,7 +64,7 @@ const oSchema = ({
         time: {
             type: String,
         }
-    }],
+    },
     taxPrice:{
         required: true,
         type: Number,
@@ -97,11 +96,11 @@ const oSchema = ({
     deliveredAt: {
         type: Date,
     },
-
-},
-{
-    timestamps: true,
-})
+    },
+    {
+        timestamps: true
+    }
+)
 
 const Order = mongoose.model('Order', oSchema)
 

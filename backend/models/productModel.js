@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const reviewSchema = ({
+const reviewSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -15,10 +15,10 @@ const reviewSchema = ({
     },
 },
 {
-    timestamps: true,
+    timestamps: true
 })
 
-const pSchema = ({
+const pSchema = mongoose.Schema({
     user:{
         required: true,
         type: mongoose.Schema.Types.ObjectId,
@@ -67,7 +67,7 @@ const pSchema = ({
     },
 },
 {
-    timestamps: true,
+    timestamps: true
 })
 
 const Prod = mongoose.model('Prod', pSchema)
