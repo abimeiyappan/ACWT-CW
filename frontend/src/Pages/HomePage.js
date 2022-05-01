@@ -14,7 +14,6 @@ const HomePage = () => {
     dispatch(listProducts())
   }, [dispatch])
 
-  const products = []
 
   return (
     <>
@@ -27,7 +26,7 @@ const HomePage = () => {
           <Product product = {product}/>
         </Col>
       )
-      )
+      ) 
       }
   </Row>
     )}
