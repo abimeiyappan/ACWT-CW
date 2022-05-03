@@ -4,7 +4,7 @@ import { Card, Button, Nav } from 'react-bootstrap'
 const Product = ({product}) => {
   return (
     <Card style={{ width: '18rem'}}>
-    <a href = {'Products/${product._id}'}>
+    <a href = {`/product/${product._id}`}>
         <Card.Img variant="top" src= {product.image}/>
     </a>
   <Card.Body>
