@@ -23,7 +23,7 @@ const Header = () => {
                 {/* <Nav.Link href="#home">Home</Nav.Link> */}
                 <Nav.Link href="/Login"><i className='fas fa-user'></i> Login</Nav.Link>
                 <Nav.Link href="/Register"><i className='fas fa-user'></i> Register</Nav.Link>
-                <Nav.Link href="/Cart"><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
+                <Nav.Link href="/Basket"><i className='fas fa-shopping-cart'></i>Basket</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

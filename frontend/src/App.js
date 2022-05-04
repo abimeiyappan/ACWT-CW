@@ -1,10 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { Container } from 'react-bootstrap'
 import HomePage from './Pages/HomePage'
 import ProductPage from './Pages/ProductPage'
+import { BasketPage } from './Pages/BasketPage'
 
 const App = () => {
   return (
@@ -12,8 +13,9 @@ const App = () => {
       <Header />
       <main className='py-4'>
         <Container>
-          <Route path='/product/:id' component={ProductPage} />
           <Route exact path='/' component={HomePage} />
+          <Route path='/product/:id' component={ProductPage} />
+          <Route path='/basket/:id?' component={BasketPage} />
         </Container>
       </main>
       <Footer />
