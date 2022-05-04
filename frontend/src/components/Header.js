@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <>
         <br />
-        <Navbar bg="info" variant="dark" expand="lg" fixed="top" collapseOnSelect>
+        <Navbar bg="info" variant="light" expand="lg" fixed="top" collapseOnSelect>
           <Container>
             <img
               alt=""
