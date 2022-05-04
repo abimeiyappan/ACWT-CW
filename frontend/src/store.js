@@ -12,7 +12,11 @@ const reducer = combineReducers({
 })
 const middleware = [thunk]
 
-const initialstate = {}
+const basketItemsFromStorage = localStorage.getItem('basketItems') ? JSON.parse(localStorage.getItem('basketItems')) : []
+
+const initialstate = {
+    cart: { basketItems: basketItemsFromStorage }
+}
 
 const store = createStore(
     reducer,
