@@ -7,6 +7,7 @@ import HomePage from './Pages/HomePage'
 import ProductPage from './Pages/ProductPage'
 import { BasketPage } from './Pages/BasketPage'
 
+
 const App = () => {
   return (
     <Router>

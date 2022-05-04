@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Card } from 'react-bootstrap'
 import Product from '../components/Product'
 import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../actions/productActions.js'
@@ -22,7 +22,10 @@ const HomePage = () => {
           <Row>
             {products.map((product) => (
               <Col key={product._id} sm={6} med={5} lg={4} xl={3}>
+
                 <Product product={product} />
+
+
               </Col>
             )
             )

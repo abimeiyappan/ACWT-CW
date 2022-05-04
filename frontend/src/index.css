@@ -1,7 +1,7 @@
 main {
     min-height: 90vh;
     margin-top: 2rem;
-    background-color: rgb(210, 228, 236);
+    background-color: rgb(226, 241, 247);
 }
 
 .rating span {
@@ -16,5 +16,20 @@ h4 {
 }
 
 footer {
-    background-color: rgb(170, 205, 220);
+    background-color: rgb(194, 219, 229);
+}
+
+.card {
+    margin: 1rem;
+    padding: 5px;
+    border-radius: 16px;
+}
+
+#round {
+    border-radius: 16px;
+}
+
+#image {
+    padding: 5px;
+    border-radius: 16px;
 }

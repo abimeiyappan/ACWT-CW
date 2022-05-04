@@ -35,7 +35,10 @@ const ProductPage = ({ history, match }) => {
         <>
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+
+              <Image src={product.image} alt={product.name} fluid id="round" />
+
+
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
@@ -66,8 +69,8 @@ const ProductPage = ({ history, match }) => {
                     </Row>
                   </ListGroup.Item>
 
-                  <ListGroup.Item>
-                    <Row>
+                  <ListGroup.Item >
+                    <Row >
                       <Col>Status:</Col>
                       <Col>
                         {product.stock > 0 ? 'In Stock' : 'Out Of Stock'}
@@ -98,7 +101,7 @@ const ProductPage = ({ history, match }) => {
                   )}
 
                   <ListGroup.Item>
-                    <Button
+                    <Button id="round"
                       onClick={addToBasketHandler}
                       className='btn-block'
                       type='button'
