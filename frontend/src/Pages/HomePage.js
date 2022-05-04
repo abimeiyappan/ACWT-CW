@@ -14,15 +14,14 @@ const HomePage = () => {
     dispatch(listProducts())
   }, [dispatch])
 
-
   return (
     <>
     <h1>Browse through our latest products!</h1>
-    { loading ? <Loader/>: error ? <Message variant = 'danger'>{error}</Message>:
+    { loading ? <Loader />: error ? <Message variant = 'danger'>{error}</Message>:
     (
       <Row>
       {products.map((product) => (
-        <Col sm = {12} med = {6} lg = {4} xl = {3}>
+        <Col key={product._id} sm = {12} med = {6} lg = {4} xl = {3}>
           <Product product = {product}/>
         </Col>
       )
