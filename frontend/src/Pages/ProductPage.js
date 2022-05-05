@@ -9,7 +9,7 @@ import Loader from '../components/Loader'
 import { listProductDetails } from '../actions/productActions'
 
 const ProductPage = ({ history, match }) => {
-  const [qty, setQty] = useState(0)
+  const [qty, setQty] = useState(1)
   const dispatch = useDispatch()
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error, product } = productDetails
@@ -83,16 +83,16 @@ const ProductPage = ({ history, match }) => {
                       <Row>
                         <Col>Quantity</Col>
                         <Col>
-                          <Form.Control as='select' value={qty} onChange={(e) =>
-                            setQty(e.target.value)}
-
+                          <Form.Control
+                            as='select'
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
                           >
-                            {[...Array(product.stock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
+                            {[...Array(product.stock).keys()].map((x) => (
+                              <option key={x + 1} value={x + 1}>
+                                {x + 1}
+                              </option>
+                            )
                             )}
                           </Form.Control>
                         </Col>

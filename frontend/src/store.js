@@ -15,7 +15,7 @@ const middleware = [thunk]
 const basketItemsFromStorage = localStorage.getItem('basketItems') ? JSON.parse(localStorage.getItem('basketItems')) : []
 
 const initialstate = {
-    cart: { basketItems: basketItemsFromStorage }
+    basket: { basketItems: basketItemsFromStorage }
 }
 
 const store = createStore(
