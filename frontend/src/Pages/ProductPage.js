@@ -8,7 +8,8 @@ import Loader from '../components/Loader'
 
 import { listProductDetails } from '../actions/productActions'
 
-const ProductPage = ({ match }) => {
+const ProductPage = ({ history, match }) => {
+  const [qty, setQty] = useState(1)
   const dispatch = useDispatch()
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error, product } = productDetails
@@ -16,7 +17,11 @@ const ProductPage = ({ match }) => {
   useEffect(() => {
     dispatch(listProductDetails(match.params.id))
   }, [dispatch, match])
-  
+
+  const addToBasketHandler = () => {
+    history.push(`/basket/${match.params.id}?qty=${qty}`)
+  }
+
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
@@ -28,9 +33,12 @@ const ProductPage = ({ match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
-        <Row>
+          <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+
+              <Image src={product.image} alt={product.name} fluid id="round" />
+
+
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
@@ -61,31 +69,30 @@ const ProductPage = ({ match }) => {
                     </Row>
                   </ListGroup.Item>
 
-                  <ListGroup.Item>
-                    <Row>
+                  <ListGroup.Item >
+                    <Row >
                       <Col>Status:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                        {product.stock > 0 ? 'In Stock' : 'Out Of Stock'}
                       </Col>
                     </Row>
                   </ListGroup.Item>
 
-                  {product.countInStock > 0 && (
+                  {product.stock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col>Quantity</Col>
                         <Col>
                           <Form.Control
                             as='select'
-                            value='0'
-                            
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
                           >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
+                            {[...Array(product.stock).keys()].map((x) => (
+                              <option key={x + 1} value={x + 1}>
+                                {x + 1}
+                              </option>
+                            )
                             )}
                           </Form.Control>
                         </Col>
@@ -94,23 +101,23 @@ const ProductPage = ({ match }) => {
                   )}
 
                   <ListGroup.Item>
-                    <Button
-                      
+                    <Button id="round"
+                      onClick={addToBasketHandler}
                       className='btn-block'
                       type='button'
-                      disabled={product.countInStock === 0}
+                      disabled={product.stock === 0}
                     >
-                      Add To Cart
+                      Add To Basket
                     </Button>
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
             </Col>
-        </Row>
+          </Row>
         </>
-      )} 
+      )}
     </>
-)
+  )
 }
 
 export default ProductPage

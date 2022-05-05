@@ -17,63 +17,63 @@ const reviewSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User',
-      },
+    },
 },
-{
-    timestamps: true
-})
+    {
+        timestamps: true
+    })
 
 const pSchema = mongoose.Schema({
-    user:{
+    user: {
         required: true,
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    name:{
+    name: {
         required: true,
         type: String,
     },
-    image:{
+    image: {
         required: true,
         type: String,
     },
-    brand:{
+    brand: {
         required: true,
         type: String,
     },
-    category:{
+    category: {
         required: true,
         type: String,
     },
-    description:{
+    description: {
         required: true,
         type: String,
     },
     review: [reviewSchema],
-    rating:{
+    rating: {
         required: true,
         type: Number,
         default: 0,
     },
-    numReviews:{
+    numReviews: {
         required: true,
         type: Number,
         default: 0,
     },
-    price:{
+    price: {
         required: true,
         type: Number,
         default: 0,
     },
-    stock:{
+    stock: {
         required: true,
         type: Number,
         default: 0,
     },
 },
-{
-    timestamps: true
-})
+    {
+        timestamps: true
+    })
 
 const Prod = mongoose.model('Prod', pSchema)
 

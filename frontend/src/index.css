@@ -1,16 +1,44 @@
 main {
     min-height: 90vh;
-    padding-top: 100px;
+    margin-top: 2rem;
+    background-color: rgb(226, 241, 247);
 }
 
 .rating span {
     margin-top: 0.2rem;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    padding: 2rem 0;
+h1 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
 }
 
+
+h2 {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+}
+
+h3,
+h4 {
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: rgb(194, 219, 229);
+}
+
+.card {
+    margin: 1rem;
+    padding: 5px;
+
+}
+
+#round {
+    border-radius: 16px;
+}
+
+#image {
+    padding: 5px;
+
+}

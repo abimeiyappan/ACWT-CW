@@ -1,35 +1,31 @@
 import React from 'react'
-import {Nav, Navbar, Container} from 'react-bootstrap'
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle'
+import { Nav, Navbar, Container } from 'react-bootstrap'
+
 
 const Header = () => {
   return (
     <header>
-        <>
-  <br />
-  <Navbar bg="primary" variant="dark" expand = "lg" collapseOnSelect>
-    <Container>
-    <img
-          alt=""
-          src="/Icon.ico"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />
-    <Navbar.Brand href="/">FurnShop</Navbar.Brand>
-    <Navbar.Toggle aria-controls='basic-navbar-nav' />
-    <Navbar.Collapse id = "basic-navbar-nav" >
-    <Nav className='ms-auto'>
-      {/* <Nav.Link href="#home">Home</Nav.Link> */}
-      <Nav.Link href="/Signup"><i className='fas fa-shopping-cart'></i> Login/Signup</Nav.Link>
-      <Nav.Link href="/Cart"><i className='fas fa-user'></i>Cart</Nav.Link>
-    </Nav>
-    </Navbar.Collapse>
-    </Container>
-  </Navbar>
+      <>
+        <br />
+        <Navbar bg="info" variant="dark" expand="lg" fixed="top" collapseOnSelect>
+          <Container>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-cart-fill" viewBox="0 0 20 20">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <Navbar.Brand href="/"> FurnShop</Navbar.Brand>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' />
+            <Navbar.Collapse id="basic-navbar-nav" >
+              <Nav className='ms-auto'>
+                <Nav.Link href="/Login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</Nav.Link>
+                <Nav.Link href="/Register"><i className='fas fa-user-plus'></i> Register</Nav.Link>
+                <Nav.Link href="/Basket"><i className="fa-solid fa-basket-shopping"></i> Basket</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
-  <br />
-</>
+        <br />
+      </>
     </header>
   )
 }
