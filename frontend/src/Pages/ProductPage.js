@@ -36,7 +36,7 @@ const ProductPage = ({ history, match }) => {
           <Row>
             <Col md={6}>
 
-              <Image src={product.image} alt={product.name} fluid id="round" />
+              <Image src={product.image} alt={product.name} fluid />
 
 
             </Col>
@@ -101,7 +101,7 @@ const ProductPage = ({ history, match }) => {
                   )}
 
                   <ListGroup.Item>
-                    <Button id="round"
+                    <Button
                       onClick={addToBasketHandler}
                       className='btn-block'
                       type='button'
