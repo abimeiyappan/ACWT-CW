@@ -34,11 +34,13 @@ footer {
 
 }
 
-#round {
-    border-radius: 16px;
-}
+
 
 #image {
     padding: 5px;
 
+}
+
+button {
+    margin: 1rem 0;
 }
