@@ -2,7 +2,10 @@ import express from 'express'
 import dotenv from 'dotenv'
 // import products from './data/products.js'
 import connectDB from './config/db.js'
+
 import productRoutes from './routes/productRoutes.js'
+import userRoutes from './routes/userRoutes.js'
+
 import {notFound, errorHandler} from './middleware/errorMiddleware.js'
 
 dotenv.config()
@@ -12,6 +15,9 @@ connectDB()
 //const express = require('express')
 //const dotenv = require('dotenv')
 const app = express()
+
+app.use(express.json())
+
 //const products = require('./data/products')
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -24,6 +30,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 app.use(notFound)
 
