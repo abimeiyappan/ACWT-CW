@@ -7,6 +7,7 @@ import HomePage from './Pages/HomePage'
 import ProductPage from './Pages/ProductPage'
 import { BasketPage } from './Pages/BasketPage'
 import LoginPage from './Pages/LoginPage'
+import RegisterPage from './Pages/RegisterPage'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route exact path='/' component={HomePage} />
           <Route path='/product/:id' component={ProductPage} />
           <Route path='/login' component={LoginPage} />
+          <Route path='/register' component={RegisterPage} />
           <Route path='/basket/:id?' component={BasketPage} />
         </Container>
       </main>
