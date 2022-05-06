@@ -30,6 +30,12 @@ const users = [
         email: 'kojo@email.com',
         password: bcrypt.hashSync('kojo', 10),
         isAdmin: true
+    },
+    {
+        name: 'karthiktest',
+        email: 'ktest@email.com',
+        password: bcrypt.hashSync('kojo', 10),
+        isAdmin: true
     }
     
 
