@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap'
 import HomePage from './Pages/HomePage'
 import ProductPage from './Pages/ProductPage'
 import { BasketPage } from './Pages/BasketPage'
-
+import LoginPage from './Pages/LoginPage'
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
         <Container>
           <Route exact path='/' component={HomePage} />
           <Route path='/product/:id' component={ProductPage} />
+          <Route path='/login' component={LoginPage} />
           <Route path='/basket/:id?' component={BasketPage} />
         </Container>
       </main>
