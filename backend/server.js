@@ -22,7 +22,6 @@ app.use(function (req, res, next) {
 });
 
 
-
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 
