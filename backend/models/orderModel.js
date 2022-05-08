@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const oSchema = mongoose.Schema({
-    name:{
+    user:{
         required: true,
         type: mongoose.Schema.Types.ObjectId,
         ref:'User',
@@ -47,7 +47,7 @@ const oSchema = mongoose.Schema({
             required: true,
         }
     },
-    paymentType:{
+    paymentMethod:{
         required: true,
         type: String,
     },
